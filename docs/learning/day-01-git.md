@@ -30,8 +30,28 @@ working folder  --git add-->  staging area  --git commit-->  history
 ## Good commit messages
 Short, present tense, says *what* changed: `Add researcher agent`, `Fix login crash`. Not `stuff` or `final final v2`.
 
+## Local vs remote (GitHub)
+
+```
+your Mac (local repo)  --git push-->  GitHub (remote "origin")
+                       <--git pull--
+```
+
+Your Mac and GitHub each hold a full copy of the history. They only sync when you push or pull.
+
+| Command | What it does |
+|---|---|
+| `gh auth login` | Log the GitHub CLI into your account (once per computer) |
+| `gh repo create <name> --public --source=. --push` | Create the GitHub repo, link it as `origin`, and push |
+| `git remote -v` | Show which online repo `origin` points to |
+| `git push` | Upload your new commits to GitHub |
+| `git pull` | Download commits made elsewhere (other computer, teammate) |
+
+Daily loop: **edit → `git add .` → `git commit -m "..."` → `git push`**.
+
+Note: in a public repo, every commit shows its author's name and email.
+
 ## Coming later
-- `git push` / `git pull` — sync with GitHub
 - `git branch` / `git switch` — try ideas without breaking main
 - `git restore` / `git revert` — undo mistakes
 
