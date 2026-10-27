@@ -17,6 +17,12 @@ Read `brief/problem.md` in the hackathon folder you are given (problem statement
 4. **Sponsor/track angle.** If the brief names sponsors or tracks, note what each one rewards and which free tool of theirs we could use.
 5. **Risks.** Anything that makes an idea hard to demo in 24h (data access, hardware, legal, needs real users).
 
+## Effort bar (do not stop early)
+- Run **at least 10 searches** across the five areas above, and open (WebFetch) at least 5 of the most useful pages rather than relying on search snippets.
+- **Verify every building block**: open its docs or pricing page and confirm it is free, has no approval wait, and what its limits are. Mark anything you could not open as `unverified`.
+- For existing solutions, look for real user complaints (Play Store reviews, Reddit, Twitter/X, news).
+- If public data doesn't exist, say so and suggest how to make realistic seed data for the demo.
+
 ## Output
 Write `brief/research.md`:
 

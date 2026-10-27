@@ -16,6 +16,11 @@ Read `brief/problem.md` (problem, judging criteria, theme, sponsors). Also read 
 3. **Map the judging criteria.** For each criterion in the brief (or the usual ones: innovation, technical complexity, impact, design, presentation), say what concretely earns full marks.
 4. **Stand-out levers.** 4–6 specific moves for this problem, e.g. a live "wow" moment in the first 30 seconds of the demo, a real user quote or dataset, an AI feature that visibly works, a polished UI, an impact number, using a sponsor's tool.
 
+## Effort bar (do not stop early)
+- Run **at least 10 searches**. If the exact theme gives fewer than 5 winners, widen in steps: same theme other countries → adjacent themes (e.g. smart city, GovTech, social good) → big general hackathons (SIH, HackMIT, ETHIndia, MLH) whose winners show the same levers.
+- Open each winner's page (WebFetch) to confirm it actually won — Devpost pages show a "Winner" badge. List unconfirmed ones separately.
+- Prefer winners from the last 3 years and from India where possible.
+
 ## Output
 Write `brief/patterns.md`:
 

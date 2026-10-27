@@ -19,5 +19,9 @@ Read `brief/problem.md`, `brief/research.md` and `brief/patterns.md`. Check `tem
 6. **Timeline.** Hour-by-hour for 24h with checkpoints: working skeleton deployed by hour 6, all must-haves by hour 16, freeze features at hour 20, then test, polish, pitch. Include sleep if the event allows it.
 7. **Task list per agent.** Separate lists for frontend, backend, database, tester, judge, each task small enough for one sitting.
 
+## Before you finish
+- **Verify, don't flag.** For every external dependency in the plan (AI model name, free-tier limits, API, dataset), run a WebSearch to confirm it exists and is free today. Only leave something "to check" if you truly couldn't confirm it.
+- **Checkpoints are hard rules.** If sleep or scope makes a checkpoint impossible, cut scope, don't move the checkpoint.
+
 ## Output
 Write `brief/plan.md` with those sections in that order. Be specific (exact names, endpoints, fields) so builder agents can start without asking questions. Then reply with the chosen idea and demo "wow" moment in 2 lines.
