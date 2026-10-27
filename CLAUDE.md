@@ -22,6 +22,17 @@ The user starts every session by saying which mode. If they don't, ask.
 | tester | Find and fix bugs before the demo |
 | judge | Score against judging criteria; pitch, README, demo script |
 
+## Handoff folder
+
+Each hackathon gets `hackathons/<event-name>/`. Agents pass work to each other through files in its `brief/` folder, in this order:
+
+1. `brief/problem.md` — the problem statement, judging criteria, rules, deadline (orchestrator writes this from what the user gives)
+2. `brief/research.md` — researcher
+3. `brief/patterns.md` — winning-patterns
+4. `brief/plan.md` — planner (the single source of truth for builders)
+
+The app itself is built in `hackathons/<event-name>/app/`. Researcher and winning-patterns are independent: run them in parallel, then the planner.
+
 ## Rules
 
 - Claude does all decisions and all shipped code. Free models (Gemini, Groq, local Ollama) only do low-risk grunt work, and Claude reviews their output before it is used.

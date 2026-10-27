@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joke Machine</title>
+  <!-- Tailwind: lets us style with class names like "bg-blue-500" instead of writing CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+  <main class="bg-slate-800 p-8 rounded-2xl max-w-md w-full text-center shadow-xl">
+    <h1 class="text-3xl font-bold mb-6">Joke Machine</h1>
+    <p id="setup" class="text-lg mb-3">Click the button for a joke.</p>
+    <p id="punchline" class="text-emerald-400 font-semibold mb-6"></p>
+    <button id="btn" class="bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-lg font-semibold">
+      Get joke
+    </button>
+  </main>
+
+  <script>
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", async () => {
+      btn.textContent = "Loading...";
+      try {
+        // fetch = the browser sends an HTTP GET request to a server
+        const res = await fetch("https://official-joke-api.appspot.com/random_joke");
+        const joke = await res.json(); // turn the JSON text into a JS object
+        document.getElementById("setup").textContent = joke.setup;
+        document.getElementById("punchline").textContent = joke.punchline;
+      } catch (err) {
+        document.getElementById("setup").textContent = "Could not reach the joke server.";
+      }
+      btn.textContent = "Get joke";
+    });
+  </script>
+</body>
+</html>
