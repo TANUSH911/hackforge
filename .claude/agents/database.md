@@ -18,11 +18,14 @@ Read `brief/plan.md` (data model, endpoints, demo story) and `brief/research.md`
    - If the research found a real open dataset, load a small cleaned slice of it and say so in a comment.
    - Running it twice must give the same result (drop and recreate).
 3. **Contract.** Write `brief/contract.md`: for every endpoint in the plan, the method, path, request JSON, response JSON with a real example, and error cases. Field names must match the schema exactly. This is the single source of truth: backend implements it, frontend calls it.
-4. **Check.** Run `python3 app/backend/db/seed.py`, then query each table with `sqlite3` (or Python) to confirm row counts and the demo records. Fix anything broken.
+4. **Demo assets.** Also do every data task the plan lists (map files, stats, datasets). If the demo needs images or files (e.g. before/after photos), put them in `app/backend/db/demo/` — find free-licensed ones or generate simple ones — and wire them to the demo records.
+5. **Demo AI results.** If the app calls an AI model, add a cache table and pre-fill it with the exact AI outputs the demo script expects for the demo records, so the demo works without an API key.
+6. **Env var names.** List every env var (backend and frontend) by exact name in `brief/contract.md`.
+7. **Check.** Run `python3 app/backend/db/seed.py`, then query each table with `sqlite3` (or Python) to confirm row counts and the demo records. Fix anything broken.
 
 ## Rules
 - Never put secrets in code. If something needs a key, read it from an env var and list it in `app/.env.example`.
 - Keep it simple: no ORM migrations framework unless the plan requires one.
 - If you change anything from the plan, note it at the top of `brief/contract.md` under "Changes from plan".
 
-Reply in 3 lines: tables created, row counts, anything the backend must know.
+Follow the reply format and builder rules in the root `CLAUDE.md`.

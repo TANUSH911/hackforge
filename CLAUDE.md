@@ -58,3 +58,12 @@ Commit after each step.
 - `templates/` — starter code for common stacks
 - `references/design-md/` — DESIGN.md style guides (VoltAgent/awesome-design-md, MIT)
 - `docs/learning/` — Tanush's lesson notes from each build day
+
+## Rules for all builder agents
+
+- **Processes:** never kill a process you didn't start. If a port is busy, pick another port. Stop only servers you launched.
+- **Precedence:** `brief/contract.md` beats `brief/plan.md` for names, paths, env vars and data files. If they conflict, follow the contract and note it.
+- **Honest labels:** never label demo/synthetic data as a real source (e.g. "BBMP 2025"). Say "demo data" on screen until real data is loaded.
+- **The demo must wow with no API key.** Pre-seed AI results for the demo records so the scripted demo shows the real verdicts even offline.
+- **Reply format:** a 3-line summary, then a `Problems` list (anything skipped, unverified or unclear). Never hide problems to stay short.
+- **Scratch files:** test databases and temp files go in a temp dir, never in `app/`.

@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "proofclose-backend",
+      "runtimeExecutable": "/bin/sh",
+      "runtimeArgs": ["-c", "cd /Users/saitanush/Documents/Workspace/HACK_AJ/hackathons/practice-01-civic-v2/app/backend && RESEED=1 .venv/bin/uvicorn main:app --port 8000"],
+      "port": 8000
+    },
+    {
+      "name": "proofclose-frontend",
+      "runtimeExecutable": "/bin/sh",
+      "runtimeArgs": ["-c", "cd /Users/saitanush/Documents/Workspace/HACK_AJ/hackathons/practice-01-civic-v2/app/frontend && node node_modules/vite/bin/vite.js --port 5173"],
+      "port": 5173
+    }
+  ]
+}

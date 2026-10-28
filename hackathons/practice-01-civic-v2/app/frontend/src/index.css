@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@theme {
+  --color-primary: #5266eb; --color-ink: #28253b; --color-ink2: #554e7b; --color-slate: #70707d;
+  --color-canvas: #fbfcfd; --color-lavender: #edecfb; --color-night: #171721;
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+body { background: var(--color-canvas); color: var(--color-ink); font-size: 16px; }
+.card { background: #fff; border-radius: 16px; border: 1px solid #ecebf3; box-shadow: 0 1px 2px rgb(40 37 59 / .04), 0 8px 24px rgb(40 37 59 / .06); }
+.btn { min-height: 48px; border-radius: 9999px; padding: 0 22px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: transform .1s, opacity .2s; }
+.btn:active { transform: scale(.97); } .btn:disabled { opacity: .5; }
+.btn-primary { background: var(--color-primary); color: #fff; } .btn-soft { background: var(--color-lavender); color: var(--color-ink); }
+.skel { background: linear-gradient(90deg,#eeedf5 25%,#f7f7fb 50%,#eeedf5 75%); background-size: 200% 100%; animation: sk 1.2s infinite; border-radius: 12px; }
+@keyframes sk { to { background-position: -200% 0 } }
+.pop { animation: pop .45s cubic-bezier(.2,1.4,.4,1); } @keyframes pop { from { transform: scale(.85); opacity: 0 } }
