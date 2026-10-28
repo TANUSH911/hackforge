@@ -31,7 +31,18 @@ Each hackathon gets `hackathons/<event-name>/`. Agents pass work to each other t
 3. `brief/patterns.md` — winning-patterns
 4. `brief/plan.md` — planner (the single source of truth for builders)
 
-The app itself is built in `hackathons/<event-name>/app/`. Researcher and winning-patterns are independent: run them in parallel, then the planner.
+5. `brief/contract.md` — database (exact API contract both builders follow)
+
+The app itself is built in `hackathons/<event-name>/app/` (`app/backend/`, `app/frontend/`).
+
+Order:
+1. researcher + winning-patterns in parallel
+2. planner
+3. database (schema, seed, contract)
+4. backend + frontend in parallel (they only share `brief/contract.md`)
+5. tester, then judge
+
+Commit after each step.
 
 ## Rules
 

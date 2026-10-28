@@ -16,6 +16,7 @@ Two modes:
 
 - [x] Day 1 — project skeleton, git setup, GitHub
 - [x] Day 2 — researcher, winning-patterns, planner agents
+- [x] Day 3 — database, backend, frontend agents
 - [ ] Week 1 — eight agents + orchestrator command
 - [ ] Week 2 — knowledge base: past winners, judging criteria, stack templates, pitch playbook
 - [ ] Week 3 — mock hackathons, fixes, polish
