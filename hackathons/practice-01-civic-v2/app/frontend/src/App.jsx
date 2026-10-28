@@ -42,7 +42,7 @@ function Honesty({ ward }) {
   const d = s.data
   return (
     <section className="rounded-2xl bg-night text-white p-6" aria-label="Ward closure honesty">
-      <p className="text-sm uppercase tracking-wider text-white/60">Ward {d.ward_no} {d.ward_name} · BBMP grievances 2025</p>
+      <p className="text-sm uppercase tracking-wider text-white/60">Ward {d.ward_no} {d.ward_name} · {d.source || "demo data"}</p>
       <div className="flex items-end gap-3 mt-2"><span className="text-6xl font-bold tabular-nums">{d.closed_pct}%</span><span className="pb-2 text-white/80">marked “Closed” of {d.total.toLocaleString()}</span></div>
       <ul className="mt-5 space-y-3">
         {d.by_category.map(c => (
@@ -243,7 +243,7 @@ export default function App() {
               className={`min-h-10 px-4 rounded-full font-semibold ${officer === (p !== '/') ? 'bg-white text-ink' : 'text-white/80'}`}>{l}</button>))}
         </nav></div></header>
       <main className="max-w-3xl mx-auto px-4 py-6">{officer ? <Officer /> : <Citizen />}</main>
-      <footer className="text-center text-sm text-slate pb-8">Every closure proves itself · Ward data: OpenCity BBMP Grievances 2025</footer>
+      <footer className="text-center text-sm text-slate pb-8">Every closure proves itself · Ward stats: demo data</footer>
     </div>
   )
 }

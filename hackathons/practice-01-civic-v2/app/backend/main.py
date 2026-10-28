@@ -207,8 +207,8 @@ async def close_ticket(tid: int, photo: Optional[UploadFile] = File(None),
             ward = f"Ward {t['ward_no']} {t['ward_name']}" if t["ward_no"] else t["ward_name"]
             n = t["report_count"]
             draft = (f"To: Assistant Executive Engineer, {ward}\nTicket #{tid} ({t['category']}, {n} citizen "
-                     f"report{'s' * (n != 1)}) was marked closed but photo verification found it NOT fixed: "
-                     f"{reason}. Open {days} days. Please reassign and attach proof of repair.")
+                     f"report{'s' * (n != 1)}) was marked closed but photo verification "
+                     f"{'found it NOT fixed' if verdict == 'not_fixed' else 'could not confirm a fix'}: {reason}. Open {days} days. Please reassign and attach proof of repair.")
         ts = now()
         con.execute("INSERT INTO verifications (ticket_id,verdict,confidence,reason,ai_source,created_at) "
                     "VALUES (?,?,?,?,?,?)", (tid, verdict, conf, reason, src, ts))
