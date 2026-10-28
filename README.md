@@ -19,5 +19,5 @@ Two modes:
 - [x] Day 3 — database, backend, frontend agents
 - [x] Day 4 — tester, judge agents + /hackathon command
 - [ ] Week 1 — eight agents + orchestrator command
-- [ ] Week 2 — knowledge base: past winners, judging criteria, stack templates, pitch playbook
+- [x] Week 2 — full-stack template, judging + pitch playbooks, 64 confirmed past winners in 6 themes
 - [ ] Week 3 — mock hackathons, fixes, polish
