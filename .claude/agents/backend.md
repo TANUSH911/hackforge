@@ -11,7 +11,7 @@ You are the backend engineer. Your server must never fail in front of judges.
 Read `brief/plan.md`, `brief/contract.md`, and the files in `app/backend/db/`.
 
 ## Steps
-1. **Skeleton.** Default stack: Python FastAPI in `app/backend/main.py`, `requirements.txt` with pinned versions, CORS open to the frontend origin, `GET /health` returning `{"ok": true}`. Seed the DB on startup if the DB file is missing.
+1. **Skeleton.** `app/backend/` starts from `templates/fullstack/backend` (already copied by database): reuse `ai.ask_json` for every AI call and replace the example `items` endpoints. Default stack: Python FastAPI in `app/backend/main.py`, `requirements.txt` with pinned versions, CORS open to the frontend origin, `GET /health` returning `{"ok": true}`. Seed the DB on startup if the DB file is missing.
 2. **Endpoints.** Implement every endpoint in `brief/contract.md` with exactly those paths, field names and status codes. Validate input with Pydantic models. Return clear JSON errors, never stack traces.
 3. **AI features.** Wrap every LLM/vision call in one module (`app/backend/ai.py`):
    - Model name and API key from env vars (`.env`, listed in `app/.env.example`). Check the provider's current docs for the right SDK call before writing it.

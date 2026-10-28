@@ -1,0 +1,15 @@
+# Render blueprint for the backend (free plan). Disk is wiped on restart: the DB reseeds on start.
+services:
+  - type: web
+    name: hackforge-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: RESEED
+        value: "1"

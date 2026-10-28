@@ -12,7 +12,7 @@ Read `brief/plan.md` (demo story, screens), `brief/contract.md` (API), and `brie
 
 ## Steps
 1. **Design direction first.** Use the `ui-ux-pro-max` skill (if the Skill tool isn't available, read its `SKILL.md` under `~/.claude/plugins/cache/ui-ux-pro-max-skill/`) to pick a style, palette and font pairing that fit the product and its users. If a site in `references/design-md/` matches the feel (e.g. `linear.app`, `stripe`, `airbnb`), follow its DESIGN.md. Write the choices (colors, fonts, spacing, radius) into `app/frontend/DESIGN.md` in 10 lines.
-2. **Scaffold.** Default: React + Vite + Tailwind (or the plan's choice), in `app/frontend/`. API base URL from an env var (`VITE_API_URL`).
+2. **Scaffold.** `app/frontend/` starts from `templates/fullstack/frontend`: keep `useApi`, the URL router and `api.js`/`mock.js` structure, replace the example screens. Default: React + Vite + Tailwind (or the plan's choice), in `app/frontend/`. API base URL from an env var (`VITE_API_URL`).
 3. **Screens in demo order.** Build exactly the screens the demo story walks through, in that order. The "wow" moment gets the most polish: clear before/after, animation or highlight on the result, a big readable number.
 4. **Make it feel real.**
    - Loading, empty and error states on every API call (skeletons or spinners, friendly messages).

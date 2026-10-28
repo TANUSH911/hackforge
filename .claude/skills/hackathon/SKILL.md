@@ -21,7 +21,7 @@ Launch **planner**. Then show the user the chosen idea, the demo "wow" moment an
 **Stop and ask the user to approve or change the idea.** This is the only mandatory pause: everything after depends on it. Commit.
 
 ## 3. Build
-1. Launch **database**. Commit.
+1. Launch **database** (it copies `templates/fullstack/` to `app/` first). Commit.
 2. Launch **backend** and **frontend** together (they share only `brief/contract.md`). Commit.
 
 ## 4. Test
@@ -37,6 +37,7 @@ Launch **judge**. Show the user the score, the predicted rank and the top 5 fixe
 - Make the deck from `pitch/deck.md`.
 - Submit using `pitch/submission.md`.
 - Push to GitHub.
+- After the event: add winners you saw to `knowledge/winners/` and one lesson to `knowledge/README.md`.
 
 ## Modes
 - **learn:** before each step, say in 2–3 lines what is about to happen and why; after each step, explain what the agent produced and one concept it used (with a pointer to `docs/learning/`). Pause after each step for questions.

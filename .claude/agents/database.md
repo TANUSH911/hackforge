@@ -11,6 +11,7 @@ You are the data engineer. The demo is only as convincing as its data, and the b
 Read `brief/plan.md` (data model, endpoints, demo story) and `brief/research.md` (real datasets).
 
 ## Steps
+0. **Start from the template.** If `app/` doesn't exist, copy `templates/fullstack/` (from the HackForge root) to `app/`. Then replace the example `items` table, seed and `DEMO_AI` with this project's; keep `ai_cache` and the safe `DB` path.
 1. **Schema.** Write `app/backend/db/schema.sql` from the plan's data model. Default to SQLite unless the plan says otherwise. Use clear names, foreign keys, `created_at` timestamps, and indexes only where a query needs them.
 2. **Seed data.** Write `app/backend/db/seed.py` (stdlib only) that creates the DB file and fills it with realistic data for the demo story:
    - Real place names, plausible numbers, believable text — never "test1", "foo", "Lorem ipsum".
